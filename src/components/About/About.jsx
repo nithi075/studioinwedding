@@ -19,7 +19,7 @@ return(
 
   <p>
 
-    At MV Photography Trichy, we believe every story deserves to be
+    At Jeno Photography Trichy, we believe every story deserves to be
     preserved with authenticity and artistic vision. From intimate
     moments to grand celebrations, we create imagery that reflects
     emotion, beauty and sophistication.
@@ -27,7 +27,7 @@ return(
   </p>
 
   <div className="signature">
-    MV Photography
+    Jeno Photography
   </div>
 
 </section>

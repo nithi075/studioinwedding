@@ -1,69 +1,52 @@
 import "./Services.css";
 
-export default function Services(){
+export default function Services() {
+  return (
+    <section className="services" id="services">
+      <div className="services-container">
+        
+        <div className="services-header">
+          <span className="services-tag">Our Expertise</span>
+          <h2 className="services-title">Bespoke Services</h2>
+          <p className="services-desc">
+            We provide complete photography solutions from capture
+            to premium album design with timeless elegance.
+          </p>
+        </div>
 
-return(
+        <div className="services-grid">
+          <div className="service-card">
+            <div className="service-number">01</div>
+            <h3>Wedding Shoot</h3>
+            <div className="card-line"></div>
+            <p>
+              Elegant wedding photography capturing
+              real emotions and beautiful moments.
+            </p>
+          </div>
 
-<section className="services">
+          <div className="service-card">
+            <div className="service-number">02</div>
+            <h3>Album Design</h3>
+            <div className="card-line"></div>
+            <p>
+              Premium quality album layouts designed
+              with artistic storytelling style.
+            </p>
+          </div>
 
-  <div className="overlay"/>
-
-  <div className="services-content">
-
-    <span className="small">
-      SERVICES
-    </span>
-
-    <h2>
-      What We Offer
-    </h2>
-
-    <p className="desc">
-
-      We provide complete photography solutions from capture
-      to premium album design with timeless elegance.
-
-    </p>
-
-
-    <div className="service-grid">
-
-      <div>
-        <h3>Wedding Shoot</h3>
-
-        <p>
-          Elegant wedding photography capturing
-          real emotions and beautiful moments.
-        </p>
+          <div className="service-card">
+            <div className="service-number">03</div>
+            <h3>Cinematic Video</h3>
+            <div className="card-line"></div>
+            <p>
+              Creative cinematic wedding films with
+              smooth editing and color grading.
+            </p>
+          </div>
+        </div>
+        
       </div>
-
-
-      <div>
-        <h3>Album Design</h3>
-
-        <p>
-          Premium quality album layouts designed
-          with artistic storytelling style.
-        </p>
-      </div>
-
-
-      <div>
-        <h3>Cinematic Video</h3>
-
-        <p>
-          Creative cinematic wedding films with
-          smooth editing and color grading.
-        </p>
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-);
-
+    </section>
+  );
 }

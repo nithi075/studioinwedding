@@ -1,23 +1,24 @@
 .about{
 
-padding:90px 20px;
+padding:110px 20px;
 
 text-align:center;
 
-background:#f7f5f3;
+/* match hero dark tone */
+background:white;
 
 font-family:'Playfair Display', serif;
 
-color:#1a1a1a;
+color:black;
 
 }
 
 /* small heading */
 .about-small{
 
-font-size:11px;
+font-size:12px;
 
-letter-spacing:4px;
+letter-spacing:3px;
 
 text-transform:uppercase;
 
@@ -25,7 +26,7 @@ opacity:.6;
 
 display:block;
 
-margin-bottom:25px;
+margin-bottom:20px;
 
 }
 
@@ -36,32 +37,35 @@ max-width:720px;
 
 margin:auto;
 
-margin-bottom:25px;
+margin-bottom:22px;
 
-font-size:30px;
+font-size:34px;
 
 font-weight:500;
 
-line-height:1.5;
+line-height:1.4;
+
+letter-spacing:.5px;
 
 }
 
 /* elegant divider */
 .divider{
 
-width:60px;
+width:70px;
 height:1px;
 
-background:#d6d1cc;
+/* soft luxury color */
+background:rgba(255,255,255,.35);
 
-margin:25px auto;
+margin:28px auto;
 
 }
 
 /* paragraph */
 .about p{
 
-max-width:620px;
+max-width:640px;
 
 margin:auto;
 
@@ -80,9 +84,11 @@ margin-bottom:35px;
 
 font-size:18px;
 
-letter-spacing:2px;
+letter-spacing:3px;
 
-opacity:.6;
+opacity:.5;
+
+font-style:italic;
 
 }
 
@@ -91,13 +97,13 @@ opacity:.6;
 
 .about{
 
-padding:110px 20px;
+padding:130px 20px;
 
 }
 
 .about h2{
 
-font-size:36px;
+font-size:38px;
 
 }
 
@@ -114,13 +120,13 @@ font-size:16px;
 
 .about{
 
-padding:130px 20px;
+padding:150px 20px;
 
 }
 
 .about h2{
 
-font-size:40px;
+font-size:42px;
 
 max-width:760px;
 
@@ -128,7 +134,7 @@ max-width:760px;
 
 .about p{
 
-max-width:680px;
+max-width:700px;
 
 }
 

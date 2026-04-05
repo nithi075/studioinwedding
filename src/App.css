@@ -1,0 +1,28 @@
+/* remove default browser spacing */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* remove body gap */
+html, body{
+  width:100%;
+  overflow-x:hidden;
+}
+
+/* remove image bottom gap */
+img{
+  display:block;
+  max-width:100%;
+}
+
+/* remove extra space between sections */
+section{
+  margin:0;
+}
+
+/* optional smoother scroll */
+html{
+  scroll-behavior:smooth;
+}

@@ -1,6 +1,7 @@
+import React from "react";
 import "./Gallery.css";
 
-// உங்க actual images import
+// Replace these with your actual local file paths
 import wedding from "../assets/wedding1.jpeg";
 import wedding2 from "../assets/img2.jpeg";
 import couple from "../assets/img3.jpeg";
@@ -14,74 +15,52 @@ import cinematic from "../assets/cinematic.jpeg";
 
 export default function Gallery() {
   const items = [
-    {
-      title: "Wedding Photography",
-      img: wedding,
-    },
-    {
-      title: "Signature Wedding",
-      img: wedding2,
-    },
-    {
-      title: "Couple Moments", 
-      img: couple,
-    },
-    {
-      title: "Portrait Studio",
-      img: portrait,
-    },
-    {
-      title: "Candid Photography",
-      img: candid,
-    },
-    {
-      title: "Engagement Shoot",
-      img: engagement,
-    },
-    {
-      title: "Reception Coverage",
-      img: reception,
-    },
-    {
-      title: "Bridal Portraits",
-      img: bride,
-    },
-    {
-      title: "Traditional Wedding",
-      img: traditional,
-    },
-    {
-      title: "Cinematic Shoots",
-      img: cinematic,
-    }
+    { title: "Wedding Photography", img: wedding, isFeatured: true },
+    { title: "Signature Wedding", img: wedding2, isFeatured: false },
+    { title: "Couple Moments", img: couple, isFeatured: false },
+    { title: "Portrait Studio", img: portrait, isFeatured: true },
+    { title: "Candid Photography", img: candid, isFeatured: false },
+    { title: "Engagement Shoot",       img: engagement, isFeatured: false },
+    { title: "Reception Coverage",  img: reception, isFeatured: false },
+    { title: "Bridal Portraits",  img: bride, isFeatured: true },
+    { title: "Traditional Wedding",  img: traditional, isFeatured: false },
+    { title: "Cinematic Shoots",  img: cinematic, isFeatured: false },
   ];
 
   return (
     <section className="gallery">
-      <div className="gallery-intro">
-        <span>PORTFOLIO COLLECTION</span>
-        <h2>Start Your Photography Journey</h2>
-        <p>
+      {/* Header Section */}
+      <div className="gallery-header">
+        <span className="gallery-tag">Portfolio Collection</span>
+        <h2 className="gallery-title">Timeless Visual Stories</h2>
+        <p className="gallery-subtitle">
           Explore our signature photography collections crafted
           with timeless elegance and cinematic storytelling.
         </p>
         <a
-          href="https://wa.me/918667041407?text=Hello%20MV%20Photography,%20I%20want%20to%20book%20a%20photoshoot"
+          href="https://wa.me/919952397023?text=Hello%20MV%20Photography,%20I%20want%20to%20book%20a%20photoshoot"
           target="_blank"
           rel="noopener noreferrer"
+          className="gallery-cta"
         >
-          <button className="btn-primary">Book Session</button>
+          Book Your Session
         </a>
       </div>
 
-      <div className="gallery-grid">
+      {/* Grid Section */}
+      <div className="gallery-masonry">
         {items.map((item, index) => (
-          <div className="gallery-card" key={index}>
-            <img src={item.img} alt={item.title} loading="lazy" />
-            <div className="image-shadow"></div>
-            <div className="center-text">
-              <h3>{item.title}</h3>
-              <span className="category-tag">{item.category}</span>
+          <div 
+            className={`gallery-item ${item.isFeatured ? "featured" : ""}`} 
+            key={index}
+          >
+            <div className="gallery-image-box">
+              <img src={item.img} alt={item.title} loading="lazy" />
+              <div className="gallery-info">
+                <span className="item-category">{item.category}</span>
+                <h3 className="item-title">{item.title}</h3>
+                <div className="item-arrow">→</div>
+              </div>
             </div>
           </div>
         ))}
