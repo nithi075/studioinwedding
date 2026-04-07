@@ -330,4 +330,94 @@
 
   }
 
+}/* MOBILE OPTIMIZATION */
+
+@media (max-width:900px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .navbar{
+    height:75px;
+  }
+
+  .nav-container{
+    padding:0 18px;
+  }
+
+  .brand-logo-img{
+    height:40px;
+  }
+
+  .brand-name{
+    font-size:1.2rem;
+    letter-spacing:3px;
+  }
+
+  .brand-sub{
+    font-size:.55rem;
+    letter-spacing:2px;
+  }
+
+  /* mobile menu text */
+
+  .mobile-menu{
+    padding:0 25px;
+  }
+
+  .mobile-links-wrapper{
+    gap:22px;
+  }
+
+  .mobile-menu a{
+    font-size:1.4rem;
+    letter-spacing:3px;
+  }
+
+  .mobile-menu a span{
+    font-size:.6rem;
+    padding:3px 8px;
+  }
+
+  .menu-backdrop-text{
+    font-size:22vh;
+  }
+
+  .mobile-footer{
+    bottom:35px;
+  }
+
+  .mobile-footer p{
+    font-size:.6rem;
+    letter-spacing:2px;
+  }
+
+  .social-links{
+    font-size:.75rem;
+  }
+
+}
+
+
+/* small mobile */
+
+@media (max-width:480px){
+
+  .brand-name{
+    font-size:1rem;
+  }
+
+  .mobile-menu a{
+    font-size:1.2rem;
+  }
+
+  .menu-backdrop-text{
+    font-size:18vh;
+  }
+
 }
