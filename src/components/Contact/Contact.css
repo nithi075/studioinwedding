@@ -222,3 +222,250 @@
   .social-grid { flex-wrap: wrap; gap: 15px; }
   .footer-meta { flex-direction: column; gap: 20px; }
 }
+/* MOBILE OPTIMIZATION */
+
+@media (max-width:1024px){
+
+  .contact{
+
+    padding:110px 28px;
+
+  }
+
+  .contact-header{
+
+    margin-bottom:70px;
+
+  }
+
+  .contact-title{
+
+    font-size:2.4rem;
+
+    letter-spacing:-1px;
+
+  }
+
+  .contact-divider{
+
+    width:60px;
+
+    margin-top:25px;
+
+  }
+
+  .contact-grid{
+
+    grid-template-columns:1fr;
+
+    gap:50px;
+
+  }
+
+  .detail-link,
+  .detail-text{
+
+    font-size:1.05rem;
+
+  }
+
+  .booking-card{
+
+    padding:45px 35px;
+
+  }
+
+  .booking-card h3{
+
+    font-size:1.7rem;
+
+  }
+
+  .booking-card p{
+
+    font-size:.92rem;
+
+  }
+
+  .btn-whatsapp{
+
+    padding:16px 22px;
+
+    font-size:.75rem;
+
+    letter-spacing:1.5px;
+
+  }
+
+  .contact-bottom{
+
+    margin-top:100px;
+
+  }
+
+}
+
+
+/* mobile */
+
+@media (max-width:600px){
+
+  .contact{
+
+    padding:90px 20px;
+
+  }
+
+  .contact-tag{
+
+    font-size:.6rem;
+
+    letter-spacing:3px;
+
+    margin-bottom:18px;
+
+  }
+
+  .contact-title{
+
+    font-size:1.9rem;
+
+    line-height:1.2;
+
+  }
+
+  .contact-header{
+
+    margin-bottom:45px;
+
+  }
+
+  .detail-group{
+
+    margin-bottom:30px;
+
+  }
+
+  .detail-label{
+
+    font-size:.55rem;
+
+    letter-spacing:2px;
+
+  }
+
+  .detail-link,
+  .detail-text{
+
+    font-size:.95rem;
+
+  }
+
+  .social-grid{
+
+    gap:12px;
+
+  }
+
+  .social-grid a{
+
+    font-size:.75rem;
+
+  }
+
+  .booking-card{
+
+    padding:32px 22px;
+
+  }
+
+  .booking-status span{
+
+    font-size:.65rem;
+
+  }
+
+  .booking-card h3{
+
+    font-size:1.4rem;
+
+    margin-bottom:12px;
+
+  }
+
+  .booking-card p{
+
+    font-size:.85rem;
+
+    margin-bottom:25px;
+
+  }
+
+  /* compact button */
+
+  .btn-whatsapp{
+
+    padding:14px 18px;
+
+    font-size:.7rem;
+
+    letter-spacing:1px;
+
+  }
+
+  .contact-bottom{
+
+    margin-top:70px;
+
+  }
+
+  .footer-meta{
+
+    flex-direction:column;
+
+    gap:15px;
+
+    font-size:.7rem;
+
+  }
+
+  .meta-links{
+
+    gap:18px;
+
+  }
+
+}
+
+
+/* small mobile */
+
+@media (max-width:420px){
+
+  .contact{
+
+    padding:70px 16px;
+
+  }
+
+  .contact-title{
+
+    font-size:1.6rem;
+
+  }
+
+  .booking-card{
+
+    padding:28px 18px;
+
+  }
+
+  .btn-whatsapp{
+
+    padding:12px 16px;
+
+    font-size:.65rem;
+
+  }
+
+}

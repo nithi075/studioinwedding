@@ -330,98 +330,8 @@
 
   }
 
-}/* MOBILE OPTIMIZATION */
-
-@media (max-width:900px){
-
-  .nav-links{
-    display:none;
-  }
-
-  .menu-toggle{
-    display:block;
-  }
-
-  .navbar{
-    height:75px;
-  }
-
-  .nav-container{
-    padding:0 18px;
-  }
-
-  .brand-logo-img{
-    height:40px;
-  }
-
-  .brand-name{
-    font-size:1.2rem;
-    letter-spacing:3px;
-  }
-
-  .brand-sub{
-    font-size:.55rem;
-    letter-spacing:2px;
-  }
-
-  /* mobile menu text */
-
-  .mobile-menu{
-    padding:0 25px;
-  }
-
-  .mobile-links-wrapper{
-    gap:22px;
-  }
-
-  .mobile-menu a{
-    font-size:1.4rem;
-    letter-spacing:3px;
-  }
-
-  .mobile-menu a span{
-    font-size:.6rem;
-    padding:3px 8px;
-  }
-
-  .menu-backdrop-text{
-    font-size:22vh;
-  }
-
-  .mobile-footer{
-    bottom:35px;
-  }
-
-  .mobile-footer p{
-    font-size:.6rem;
-    letter-spacing:2px;
-  }
-
-  .social-links{
-    font-size:.75rem;
-  }
-
 }
-
-
-/* small mobile */
-
-@media (max-width:480px){
-
-  .brand-name{
-    font-size:1rem;
-  }
-
-  .mobile-menu a{
-    font-size:1.2rem;
-  }
-
-  .menu-backdrop-text{
-    font-size:18vh;
-  }
-
-}
-/* MOBILE OPTIMIZATION */
+/* MOBILE OPTIMIZED NAVBAR */
 
 @media (max-width:900px){
 
@@ -436,7 +346,7 @@
   }
 
   .navbar{
-    height:70px;
+    height:68px;
   }
 
   .nav-container{
@@ -446,17 +356,17 @@
   /* logo */
 
   .brand-logo-img{
-    height:36px;
+    height:34px;
   }
 
   .brand-name{
-    font-size:1.05rem;
-    letter-spacing:2.5px;
+    font-size:1rem;
+    letter-spacing:2.2px;
   }
 
   .brand-sub{
-    font-size:.5rem;
-    letter-spacing:1.8px;
+    font-size:.48rem;
+    letter-spacing:1.5px;
   }
 
 
@@ -467,30 +377,32 @@
   }
 
   .mobile-links-wrapper{
-    gap:18px;
+    gap:16px;
   }
 
   .mobile-menu a{
 
-    font-size:1.25rem;
+    font-size:1.15rem;
 
-    letter-spacing:2.5px;
+    letter-spacing:2px;
 
   }
 
   .mobile-menu a span{
 
-    font-size:.55rem;
+    font-size:.5rem;
 
-    padding:2px 7px;
+    padding:2px 6px;
 
   }
 
+  /* subtle background text */
+
   .menu-backdrop-text{
 
-    font-size:18vh;
+    font-size:16vh;
 
-    opacity:.04;
+    opacity:.03;
 
   }
 
@@ -499,21 +411,21 @@
 
   .mobile-footer{
 
-    bottom:28px;
+    bottom:24px;
 
   }
 
   .mobile-footer p{
 
-    font-size:.55rem;
+    font-size:.5rem;
 
-    letter-spacing:1.8px;
+    letter-spacing:1.5px;
 
   }
 
   .social-links{
 
-    font-size:.7rem;
+    font-size:.65rem;
 
   }
 
@@ -526,33 +438,31 @@
 
   .navbar{
 
-    height:65px;
+    height:64px;
 
   }
 
   .brand-logo-img{
 
-    height:32px;
+    height:30px;
 
   }
 
   .brand-name{
 
-    font-size:.95rem;
+    font-size:.9rem;
 
   }
 
   .mobile-menu a{
 
-    font-size:1.1rem;
-
-    letter-spacing:2px;
+    font-size:1.05rem;
 
   }
 
   .menu-backdrop-text{
 
-    font-size:15vh;
+    font-size:13vh;
 
   }
 
