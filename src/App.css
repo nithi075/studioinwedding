@@ -1,28 +1,70 @@
-/* remove default browser spacing */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+  /* Mobile browsers-la horizontal scroll-ai force panni stop panna */
+  max-width: 100vw; 
 }
 
-/* remove body gap */
-html, body{
-  width:100%;
-  overflow-x:hidden;
+#root {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+/* FIX TOP WHITE SPACE FROM FIXED NAVBAR */
+
+body{
+  padding-top: var(--nav-h);
 }
 
-/* remove image bottom gap */
-img{
-  display:block;
-  max-width:100%;
+@media(max-width:900px){
+
+  body{
+    padding-top: var(--nav-h-mob);
+  }
+
+
+}
+.hero{
+  height:100vh;
+  padding-top:0;
 }
 
-/* remove extra space between sections */
-section{
-  margin:0;
+.services,
+.work,
+.gallery,
+.about{
+
+  padding:140px 40px;
+
 }
 
-/* optional smoother scroll */
-html{
-  scroll-behavior:smooth;
+@media(max-width:768px){
+
+.services,
+.work,
+.gallery,
+.about{
+
+  padding:80px 20px;
+
+}
+
+.floating-wrapper{
+
+  bottom:20px;
+
+}
+
+}
+/* FIX SECTION GAP */
+
+.work{
+  padding-bottom:100px;
+}
+
+.contact{
+  padding-top:100px;
 }

@@ -5,43 +5,47 @@ export default function About() {
     <section className="about" id="about">
       <div className="about-wrapper">
         
-        {/* Left Side: Large Bold Heading */}
+        {/* Left Side: Brand Philosophy */}
         <div className="about-header">
-          <span className="about-tag">Since 2018 — Trichy</span>
+          <span className="about-tag">Mastering the Lens — Since 2018</span>
           <h2 className="about-main-title">
-            Preserving the <span className="accent-italic">soul</span> of your <br />
-            most precious celebrations.
+            We don't just take <span className="accent-italic">photos</span>, <br />
+            we curate your <span className="accent-italic">legacy</span>.
           </h2>
         </div>
 
-        {/* Right Side: Detailed Content with Stats */}
+        {/* Right Side: Deep Content */}
         <div className="about-details">
           <div className="about-text-group">
             <p className="about-lead">
-              At MV Photography, we believe every story deserves to be
-              preserved with authenticity and artistic vision.
+              At StudioIn Weddings, we see the world in frames. Your love story isn't a checklist; 
+              it's a cinematic masterpiece waiting to be told.
             </p>
             <p className="about-body">
-              From the intimate whispers of a pre-wedding shoot to the grand 
-              opulence of a royal wedding, we ensure every detail is captured 
-              with sophistication and cinematic elegance.
+              Specializing in luxury wedding cinematography and candid portraiture across Tamil Nadu, 
+              our mission is to capture the "in-between" moments—the silent glances, the joyful tears, 
+              and the unscripted laughter that defines who you are.
             </p>
           </div>
 
+          {/* New Grid for Philosophy */}
           <div className="about-stats">
             <div className="stat-item">
-              <span className="stat-num">150+</span>
-              <span className="stat-label">Weddings Captured</span>
+              <span className="stat-num">Authentic</span>
+              <span className="stat-label">No Forced Poses</span>
             </div>
             <div className="stat-item">
-              <span className="stat-num">08+</span>
-              <span className="stat-label">Years of Vision</span>
+              <span className="stat-num">Cinematic</span>
+              <span className="stat-label">High-End Visuals</span>
             </div>
           </div>
 
           <div className="about-footer">
             <div className="signature-line"></div>
-            <span className="signature-text">MV Photography</span>
+            <div className="footer-meta">
+              <span className="signature-text">StudioIn Weddings</span>
+              <p className="loc-text">Trichy • Madurai • Chennai</p>
+            </div>
           </div>
         </div>
 

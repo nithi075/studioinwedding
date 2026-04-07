@@ -1,20 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Plus+Jakarta+Sans:wght@300;500;700&display=swap');
-
-/* --- MAIN SECTION --- */
 .work {
-  padding: 140px 60px;
-  background-color: #ffffff; /* Clean White for Gallery feel */
+  padding: 160px 40px;
+  background-color: #080808; /* Luxury Deep Black */
+  color: #fff;
 }
 
 .work-container {
-  max-width: 1400px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
 /* --- HEADER --- */
 .work-header {
-  margin-bottom: 80px;
+  margin-bottom: 100px;
   text-align: center;
+}
+
+.work-tag-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.tag-line {
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, #2CB2C5, #D22B7D);
 }
 
 .work-tag {
@@ -22,41 +34,48 @@
   font-size: 0.75rem;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: #FF8C00;
+  color: #2CB2C5;
   font-weight: 700;
-  display: block;
-  margin-bottom: 15px;
 }
 
 .work-title {
   font-family: 'Cinzel', serif;
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
-  color: #111;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 400;
+  margin-bottom: 20px;
 }
 
-.work-divider {
-  width: 50px;
-  height: 2px;
-  background: #FF8C00;
-  margin: 25px auto 0;
+.accent-text {
+  background: linear-gradient(90deg, #2CB2C5, #D22B7D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
 }
 
-/* --- DESKTOP GRID (4 Columns) --- */
+.work-subtitle {
+  font-family: 'Plus Jakarta Sans';
+  font-size: 1rem;
+  opacity: 0.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- PREMIUM GRID --- */
 .work-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 220px; /* Base height units */
-  gap: 25px;
+  grid-auto-rows: 240px;
+  gap: 20px;
 }
 
 .work-item {
   position: relative;
   overflow: hidden;
-  background: #f9f9f9;
+  background: #111;
+  border-radius: 4px;
 }
 
-/* Desktop Sizes - Editorial Mix */
+/* Sizing Logic */
 .tall { grid-row: span 3; }
 .wide { grid-column: span 2; grid-row: span 2; }
 .medium { grid-row: span 2; }
@@ -72,299 +91,219 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: grayscale(20%);
+  transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1), filter 0.5s;
 }
 
 .work-item:hover img {
-  transform: scale(1.1);
+  transform: scale(1.08);
+  filter: grayscale(0%);
 }
 
-/* Overlay Styling */
+/* Premium Overlay */
 .work-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 70%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 25px;
+  padding: 35px;
   opacity: 0;
-  transition: 0.5s ease;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .work-item:hover .work-overlay {
   opacity: 1;
+  transform: translateY(0);
 }
 
 .work-num {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Plus Jakarta Sans';
   font-size: 0.7rem;
-  color: #FF8C00;
+  color: #2CB2C5;
   font-weight: 800;
-  margin-bottom: 5px;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .work-cat {
   color: #fff;
   font-family: 'Cinzel', serif;
-  font-size: 1.3rem;
-  letter-spacing: 1px;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
 }
 
-/* --- FOOTER BUTTON --- */
+.work-view-btn {
+  font-family: 'Plus Jakarta Sans';
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #D22B7D;
+  display: inline-block;
+  font-weight: 700;
+}
+
+/* --- FOOTER CTA --- */
 .work-footer {
-  margin-top: 100px;
+  margin-top: 120px;
   text-align: center;
 }
 
-.btn-explore {
-  display: inline-block;
-  padding: 18px 50px;
-  border: 1px solid #111;
-  color: #111;
-  text-decoration: none;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  transition: 0.4s ease;
-}
-
-.btn-explore:hover {
-  background: #111;
+.btn-premium-work {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 60px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
   color: #fff;
+  text-decoration: none;
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+  transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-/* --- UNIQUE MOBILE LAYOUT (2 Columns Zig-Zag) --- */
-@media (max-width: 768px) {
-  .work {
-    padding: 80px 20px;
-  }
+.btn-premium-work svg {
+  width: 20px;
+  transition: transform 0.4s;
+}
 
-  /* Grid configuration for Mobile */
+.btn-premium-work:hover {
+  border-color: #2CB2C5;
+  background: rgba(44, 178, 197, 0.05);
+}
+
+.btn-premium-work:hover svg {
+  transform: translateX(10px);
+  color: #2CB2C5;
+}
+
+/* --- MOBILE STAGGERED GRID --- */
+@media (max-width: 992px) {
   .work-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Exactly 2 images per row */
-    grid-auto-rows: minmax(180px, auto); /* Flexible height */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .work { padding: 80px 20px; }
+  .work-header { margin-bottom: 60px; }
+  
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(180px, auto);
     gap: 15px;
-    padding-bottom: 40px;
   }
 
-  /* Resetting Desktop Specific Spans */
+  /* Reset spans */
   .tall, .wide, .medium, .small {
     grid-column: span 1 !important;
     grid-row: span 1 !important;
   }
 
-  /* ZIG-ZAG OFFSET: Even numbered items (right column) slightly lower */
+  /* Zig-Zag Effect */
   .work-item:nth-child(even) {
-    transform: translateY(35px);
+    transform: translateY(30px);
   }
 
-  /* UNIQUE HEIGHTS: Creating a staggered effect */
-  /* Type 1: Standard Height */
-  .work-item:nth-child(4n+1) { height: 220px; }
-  /* Type 2: Slightly Taller */
-  .work-item:nth-child(4n+2) { height: 260px; }
-  /* Type 3: Short/Square */
-  .work-item:nth-child(4n+3) { height: 200px; }
-  /* Type 4: Portrait Style */
-  .work-item:nth-child(4n+4) { height: 240px; }
+  .work-item:nth-child(4n+1) { height: 210px; }
+  .work-item:nth-child(4n+2) { height: 250px; }
+  .work-item:nth-child(4n+3) { height: 180px; }
+  .work-item:nth-child(4n+4) { height: 230px; }
 
-  /* Mobile Overlay: Permanent show for UX */
   .work-overlay {
     opacity: 1;
-    padding: 15px;
-    background: linear-gradient(transparent, rgba(0,0,0,0.5));
+    transform: translateY(0);
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
   }
 
-  .work-num { font-size: 0.6rem; }
-  .work-cat { font-size: 0.9rem; }
-
-  .work-footer {
-    margin-top: 60px;
-  }
+  .work-cat { font-size: 1rem; }
+  .work-view-btn { display: none; } /* Hide on mobile for clean look */
 }
+/* --- MOBILE ONLY CSS --- */
+@media (max-width: 768px) {
 
-@media (max-width: 500px) {
+  .work {
+    padding: 80px 20px;
+  }
+
+  .work-header {
+    margin-bottom: 60px;
+  }
+
+  .work-title {
+    font-size: 2.2rem;
+  }
+
+  .work-subtitle {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+
   .work-grid {
-    gap: 10px; /* Tighter gap for small screens */
-  }
-  .work-item:nth-child(even) {
-    transform: translateY(25px); /* Reduced offset for tiny screens */
-  }
-}
-/* MOBILE OPTIMIZATION */
-
-@media (max-width:768px){
-
-  .work{
-
-    padding:70px 18px;
-
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(180px, auto);
+    gap: 15px;
   }
 
-  .work-header{
-
-    margin-bottom:50px;
-
-  }
-
-  .work-tag{
-
-    font-size:.65rem;
-
-    letter-spacing:3px;
-
-  }
-
-  .work-title{
-
-    font-size:1.9rem;
-
-  }
-
-  .work-divider{
-
-    width:40px;
-
-    margin-top:18px;
-
-  }
-
-
-  /* grid */
-
-  .work-grid{
-
-    grid-template-columns:repeat(2,1fr);
-
-    grid-auto-rows:minmax(160px,auto);
-
-    gap:12px;
-
-    padding-bottom:30px;
-
-  }
-
-
-  /* reset desktop spans */
-
+  /* Remove desktop span sizes */
   .tall,
   .wide,
   .medium,
-  .small{
-
-    grid-column:span 1 !important;
-
-    grid-row:span 1 !important;
-
+  .small {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
   }
 
-
-  /* subtle zig zag */
-
-  .work-item:nth-child(even){
-
-    transform:translateY(22px);
-
+  /* Zig-zag stagger layout */
+  .work-item:nth-child(even) {
+    transform: translateY(30px);
   }
 
-
-  /* balanced heights */
-
-  .work-item:nth-child(4n+1){ height:190px; }
-
-  .work-item:nth-child(4n+2){ height:220px; }
-
-  .work-item:nth-child(4n+3){ height:170px; }
-
-  .work-item:nth-child(4n+4){ height:210px; }
-
-
-  /* overlay */
-
-  .work-overlay{
-
-    opacity:1;
-
-    padding:12px;
-
-    background:linear-gradient(transparent,rgba(0,0,0,.55));
-
+  /* Different heights for premium feel */
+  .work-item:nth-child(4n+1) {
+    height: 210px;
   }
 
-  .work-num{
-
-    font-size:.55rem;
-
+  .work-item:nth-child(4n+2) {
+    height: 250px;
   }
 
-  .work-cat{
-
-    font-size:.8rem;
-
-    letter-spacing:.5px;
-
+  .work-item:nth-child(4n+3) {
+    height: 180px;
   }
 
-
-  /* button */
-
-  .work-footer{
-
-    margin-top:45px;
-
+  .work-item:nth-child(4n+4) {
+    height: 230px;
   }
 
-  .btn-explore{
-
-    padding:12px 26px;
-
-    font-size:.7rem;
-
-    letter-spacing:1px;
-
+  .work-overlay {
+    opacity: 1;
+    transform: translateY(0);
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
   }
 
-}
-
-
-/* small mobile */
-
-@media (max-width:500px){
-
-  .work{
-
-    padding:60px 14px;
-
+  .work-cat {
+    font-size: 1rem;
   }
 
-  .work-title{
-
-    font-size:1.6rem;
-
+  .work-view-btn {
+    display: none; /* hide button on mobile */
   }
 
-  .work-grid{
-
-    gap:8px;
-
+  .btn-premium-work {
+    padding: 16px 35px;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
   }
-
-  .work-item:nth-child(even){
-
-    transform:translateY(18px);
-
-  }
-
-  .work-item:nth-child(4n+1){ height:170px; }
-
-  .work-item:nth-child(4n+2){ height:200px; }
-
-  .work-item:nth-child(4n+3){ height:160px; }
-
-  .work-item:nth-child(4n+4){ height:190px; }
 
 }

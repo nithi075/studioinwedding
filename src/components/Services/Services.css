@@ -1,279 +1,268 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Plus+Jakarta+Sans:wght@300;500;700&display=swap');
-
 .services {
-  padding: 160px 60px;
-  background-color: #ffffff;
-  color: #111;
+  padding: 160px 40px;
+  background-color: #080808;
+  color: #fff;
+  overflow: hidden;
 }
 
 .services-container {
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
-/* --- Header Styling --- */
+/* --- HEADER STYLES --- */
 .services-header {
   margin-bottom: 100px;
+  text-align: left;
+}
+
+.services-tag-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
 }
 
 .services-tag {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.75rem;
-  letter-spacing: 6px;
+  font-family: 'Plus Jakarta Sans';
   text-transform: uppercase;
-  color: #FF8C00;
+  letter-spacing: 5px;
+  font-size: 0.75rem;
+  color: #2CB2C5;
   font-weight: 700;
-  display: block;
-  margin-bottom: 20px;
+}
+
+.tag-dot {
+  width: 6px;
+  height: 6px;
+  background: #D22B7D;
+  border-radius: 50%;
 }
 
 .services-title {
   font-family: 'Cinzel', serif;
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
   line-height: 1.1;
-  color: #111;
+  font-weight: 400;
 }
 
 .title-accent {
-  font-style: italic;
-  font-weight: 400;
-  color: #999;
+  background: linear-gradient(90deg, #2CB2C5, #D22B7D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
 }
 
-.header-divider {
-  width: 60px;
-  height: 2px;
-  background: #FF8C00;
-  margin-top: 30px;
+.services-subtitle {
+  font-family: 'Plus Jakarta Sans';
+  font-size: 1rem;
+  opacity: 0.5;
+  margin-top: 25px;
+  max-width: 450px;
 }
 
-/* --- List Row Styling --- */
-.services-list-wrapper {
-  border-top: 1px solid rgba(0,0,0,0.08);
-}
-
+/* --- SERVICE ROW STYLES --- */
 .service-row {
-  display: grid;
-  grid-template-columns: 150px 1fr 200px;
-  padding: 60px 0;
   position: relative;
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
   align-items: center;
-  transition: all 0.5s ease;
+  padding: 60px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   cursor: pointer;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
-.service-row:hover {
-  background: #fafafa;
-  padding-left: 30px;
-}
-
-/* Number Styling */
-.service-number {
+.service-id-box {
   font-family: 'Cinzel', serif;
   font-size: 1.5rem;
-  color: #ddd;
-  transition: color 0.4s ease;
+  opacity: 0.2;
+  transition: 0.4s;
 }
 
-.service-row:hover .service-number {
-  color: #FF8C00;
-}
-
-/* Content Styling */
 .service-item-tag {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.65rem;
+  font-family: 'Plus Jakarta Sans';
+  font-size: 0.6rem;
   letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #999;
+  color: #D22B7D;
+  font-weight: 700;
   display: block;
   margin-bottom: 10px;
 }
 
 .service-item-title {
   font-family: 'Cinzel', serif;
-  font-size: 2rem;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
   margin-bottom: 15px;
-  color: #111;
+  transition: 0.4s;
 }
 
 .service-item-desc {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Plus Jakarta Sans';
   font-size: 1rem;
-  line-height: 1.7;
-  color: #666;
+  color: #888;
   max-width: 600px;
+  line-height: 1.7;
 }
 
-/* Circle Button Animation */
+/* --- ACTION BUTTON --- */
 .service-circle-btn {
   width: 100px;
   height: 100px;
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.7rem;
+  position: relative;
+  overflow: hidden;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-inner span {
+  font-size: 0.6rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  opacity: 0;
-  transform: scale(0.5) rotate(-45deg);
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.btn-inner svg {
+  width: 18px;
+  transition: 0.4s;
+}
+
+/* --- HOVER EFFECTS --- */
+.service-row:hover {
+  padding-left: 30px;
+  border-bottom-color: transparent;
+}
+
+.service-row:hover .service-id-box {
+  opacity: 1;
+  color: #2CB2C5;
+  transform: translateX(-10px);
+}
+
+.service-row:hover .service-item-title {
+  transform: translateX(10px);
+  color: #fff;
 }
 
 .service-row:hover .service-circle-btn {
-  opacity: 1;
-  transform: scale(1) rotate(0);
-  background: #111;
-  color: #fff;
-  border-color: #111;
+  background: #fff;
+  border-color: #fff;
 }
 
-/* --- Responsive Adjustments --- */
-@media (max-width: 1024px) {
+.service-row:hover .btn-inner {
+  color: #000;
+}
+
+.service-row:hover .btn-inner svg {
+  transform: rotate(45deg);
+}
+
+/* Glow Reveal */
+.hover-reveal-glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(44, 178, 197, 0.05) 0%, transparent 100%);
+  opacity: 0;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.service-row:hover .hover-reveal-glow {
+  opacity: 1;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 900px) {
   .service-row {
-    grid-template-columns: 80px 1fr;
+    grid-template-columns: 1fr;
+    gap: 30px;
     padding: 40px 0;
   }
-  .service-action { display: none; }
+  
+  .service-id-box { display: none; }
+  
+  .service-action {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .service-circle-btn {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .btn-inner span { display: none; }
 }
-
-@media (max-width: 600px) {
-  .services { padding: 80px 25px; }
-  .service-row { display: block; }
-  .service-id-box { margin-bottom: 15px; }
-  .service-item-title { font-size: 1.6rem; }
-  .service-row:hover { padding-left: 15px; }
-}
-/* MOBILE OPTIMIZATION */
+/* ===== MOBILE OPTIMIZED SERVICES ===== */
 
 @media (max-width:1024px){
 
   .services{
-
-    padding:110px 28px;
-
+    padding:110px 25px 70px;
   }
 
   .services-header{
-
-    margin-bottom:70px;
-
-  }
-
-  .services-title{
-
-    font-size:2.4rem;
-
-  }
-
-  .header-divider{
-
-    width:50px;
-
-    margin-top:22px;
-
-  }
-
-  .service-row{
-
-    grid-template-columns:70px 1fr;
-
-    padding:32px 0;
-
-  }
-
-  .service-number{
-
-    font-size:1.1rem;
-
-  }
-
-  .service-item-title{
-
-    font-size:1.6rem;
-
-    margin-bottom:10px;
-
-  }
-
-  .service-item-desc{
-
-    font-size:.9rem;
-
-    line-height:1.6;
-
-  }
-
-  .service-circle-btn{
-
-    display:none;
-
+    margin-bottom:60px;
   }
 
 }
 
 
-/* mobile */
-
-@media (max-width:600px){
+/* main mobile */
+@media (max-width:768px){
 
   .services{
+    padding:90px 20px 60px;
+  }
 
-    padding:85px 20px;
-
+  /* heading */
+  .services-title{
+    font-size:clamp(1.9rem,7vw,2.4rem);
+    line-height:1.2;
   }
 
   .services-tag{
-
-    font-size:.6rem;
-
+    font-size:0.65rem;
     letter-spacing:3px;
-
   }
 
-  .services-title{
-
-    font-size:1.9rem;
-
+  .services-subtitle{
+    font-size:0.9rem;
+    opacity:0.7;
+    margin-top:18px;
+    max-width:100%;
   }
 
-  .services-header{
 
-    margin-bottom:50px;
-
-  }
-
+  /* service rows */
   .service-row{
 
-    display:block;
+    grid-template-columns:1fr;
 
-    padding:26px 0;
+    gap:18px;
+
+    padding:28px 0;
 
   }
 
   .service-id-box{
-
-    margin-bottom:10px;
-
-  }
-
-  .service-number{
-
-    font-size:1rem;
-
-    margin-bottom:8px;
-
-    color:#FF8C00;
-
+    display:none;
   }
 
   .service-item-tag{
 
-    font-size:.55rem;
+    font-size:0.55rem;
 
     letter-spacing:2px;
 
@@ -291,40 +280,73 @@
 
   .service-item-desc{
 
-    font-size:.82rem;
+    font-size:0.9rem;
 
     line-height:1.6;
 
+    max-width:100%;
+
   }
 
+
+  /* action button */
+  .service-action{
+
+    margin-top:10px;
+
+  }
+
+  .service-circle-btn{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+  }
+
+  .btn-inner svg{
+
+    width:16px;
+
+  }
+
+  .btn-inner span{
+
+    display:none;
+
+  }
+
+
+  /* remove hover movement on mobile */
   .service-row:hover{
 
-    padding-left:8px;
+    padding-left:0;
+
+  }
+
+  .service-row:hover .service-item-title{
+
+    transform:none;
 
   }
 
 }
 
 
-/* small mobile */
-
-@media (max-width:420px){
-
-  .services{
-
-    padding:70px 16px;
-
-  }
+/* small phones */
+@media (max-width:480px){
 
   .services-title{
 
-    font-size:1.6rem;
+    font-size:1.7rem;
 
   }
 
   .service-item-title{
 
-    font-size:1.2rem;
+    font-size:1.25rem;
 
   }
 

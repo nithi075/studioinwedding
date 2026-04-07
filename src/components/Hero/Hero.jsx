@@ -4,28 +4,26 @@ import "./Hero.css";
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   
-  // High-End Unsplash Photography Images
+  // StudioIn Premium Cinematic Images
   const images = [
-    "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069&auto=format&fit=crop", // Wedding Story
-    "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop", // Luxury Reception
-    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop"  // Emotional Portrait
+    "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069&auto=format&fit=crop", 
+    "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop", 
+    "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070&auto=format&fit=crop"  
   ];
 
   const whatsappNumber = "919659414250";
-  const message = "Hello MV Photography, I would like to book a luxury photography session. Please share details.";
+  const message = "Hello StudioIn Weddings, I'm interested in booking a cinematic photography session. Please share your packages.";
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-  // Automatic Slider Logic
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-    }, 5000); 
+    }, 6000); // 6 seconds for better viewing experience
     return () => clearInterval(timer);
   }, [images.length]);
 
   return (
     <section className="hero" id="hero">
-      {/* Background Slider Container */}
       <div className="hero-slider">
         {images.map((img, index) => (
           <div
@@ -40,20 +38,20 @@ export default function Hero() {
 
       <div className="hero-content">
         <div className="hero-text-wrapper">
-          <span className="hero-label">The Gold Standard of Visual Art</span>
+          <span className="hero-label">The Art of Storytelling</span>
           
           <h1 className="hero-title">
-            Crafting Legacies <br />
-            <span className="accent-text">One Frame at a Time</span>
+            Preserving Emotions <br />
+            <span className="accent-text">Beyond Time</span>
           </h1>
 
           <div className="hero-divider"></div>
 
           <p className="hero-description">
-            Where cinematic vision meets authentic emotions. We don't just capture images; 
-            we preserve the soul of your most precious celebrations.
+            Cinematic vision meeting authentic heartbeats. We don't just capture images; 
+            we frame the soul of your legacy.
             <br />
-            <span className="category-tags">Royal Weddings • Luxury Portraits • Cinematic Stories</span>
+            <span className="category-tags">Infinity Weddings • Timeless Portraits • Cinematic Legacies</span>
           </p>
 
           <div className="hero-actions">
@@ -61,12 +59,11 @@ export default function Hero() {
               Reserve Your Date
             </a>
             <a href="#work" className="btn-outline">
-              Explore The Gallery
+              Explore Portfolio
             </a>
           </div>
         </div>
 
-        {/* Slide Indicators (Dots) */}
         <div className="slide-dots">
           {images.map((_, index) => (
             <span 
@@ -79,7 +76,10 @@ export default function Hero() {
       </div>
  
       <div className="scroll-indicator">
-        <span className="mouse"><span className="wheel"></span></span>
+        <div className="mouse">
+          <div className="wheel"></div>
+        </div>
+        <span className="scroll-text">SCROLL</span>
       </div>
     </section>
   ); 

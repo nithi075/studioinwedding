@@ -11,199 +11,104 @@
 .floating-glass-btn {
   display: flex;
   align-items: center;
-  gap: 0px; /* Hidden text by default */
-  padding: 15px;
-  background: rgba(255, 255, 255, 0.1); /* Transparent White */
-  backdrop-filter: blur(15px); /* Glass Blur */
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50px;
+  padding: 12px 24px;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   text-decoration: none;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  overflow: hidden;
-  max-width: 60px; /* Circle shape initially */
+  color: #fff;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .icon-container {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #111; /* Dark icon for white-ish glass */
-  transition: transform 0.5s ease;
 }
 
 .whatsapp-icon {
   width: 100%;
   height: 100%;
-  fill: currentColor;
+  fill: #2CB2C5; /* Brand Cyan */
+  transition: transform 0.5s;
 }
 
 .floating-text {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  color: #111;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   white-space: nowrap;
-  opacity: 0;
-  transform: translateX(10px);
-  transition: all 0.5s ease;
 }
 
-/* --- Hover State --- */
+/* --- HOVER EFFECTS --- */
 .floating-glass-btn:hover {
-  max-width: 220px; /* Expands on hover */
-  gap: 15px;
-  padding: 15px 25px;
-  background: rgba(255, 255, 255, 0.9); /* More solid on hover */
-  border-color: #FF8C00;
+  background: rgba(44, 178, 197, 0.15);
+  border-color: #2CB2C5;
+  transform: translateY(-5px) scale(1.05);
 }
 
-.floating-glass-btn:hover .icon-container {
-  color: #FF8C00;
-  transform: rotate(360deg);
+.floating-glass-btn:hover .whatsapp-icon {
+  transform: rotate(15deg) scale(1.2);
+  fill: #fff;
 }
 
-.floating-glass-btn:hover .floating-text {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* --- Animated Pulse Ring --- */
+/* --- DYNAMIC PULSE --- */
 .floating-pulse {
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 50px;
-  background: #FF8C00;
-  opacity: 0;
+  border-radius: 100px;
+  background: transparent;
+  border: 1px solid #2CB2C5;
   z-index: -1;
-  animation: floating-ring 3s infinite;
+  opacity: 0;
+  animation: floating-ping 3s infinite;
 }
 
-@keyframes floating-ring {
-  0% { transform: scale(0.8); opacity: 0; }
-  50% { opacity: 0.3; }
-  100% { transform: scale(1.5); opacity: 0; }
+@keyframes floating-ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.4, 1.8);
+    opacity: 0;
+  }
 }
 
-/* --- Mobile Adjustments --- */
+/* --- MOBILE OPTIMIZATION --- */
 @media (max-width: 768px) {
   .floating-wrapper {
     bottom: 25px;
-    right: 25px;
-  }
-  
-  /* Mobile-la eppovume expand aagi irukkurathu better visibility tharum */
-  .floating-glass-btn {
-    max-width: 200px;
-    gap: 12px;
-    padding: 12px 20px;
-    background: rgba(255, 255, 255, 0.95);
-    border: 1px solid #FF8C00;
+    right: 20px;
   }
   
   .floating-text {
-    opacity: 1;
-    transform: translateX(0);
-    font-size: 0.75rem;
+    display: none; /* Mobile-la icon mattum theriya allow pannuvom for space */
   }
   
+  .floating-glass-btn {
+    padding: 15px;
+    border-radius: 50%; /* Circle icon on mobile */
+  }
+
   .icon-container {
-    color: #FF8C00;
+    width: 28px;
+    height: 28px;
   }
 }
-/* MOBILE OPTIMIZATION */
-
-@media (max-width:768px){
-
-  .floating-wrapper{
-
-    bottom:20px;
-
-    right:18px;
-
-  }
-
-
-  .floating-glass-btn{
-
-    max-width:170px;
-
-    gap:10px;
-
-    padding:10px 16px;
-
-    border-radius:40px;
-
-    background:rgba(255,255,255,.96);
-
-    border:1px solid #FF8C00;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.12);
-
-  }
-
-
-  .icon-container{
-
-    width:22px;
-
-    height:22px;
-
-    color:#FF8C00;
-
-  }
-
-
-  .floating-text{
-
-    opacity:1;
-
-    transform:translateX(0);
-
-    font-size:.7rem;
-
-    letter-spacing:.5px;
-
-  }
-
-
-  .floating-pulse{
-
-    display:none;
-
-  }
-
-}
-
-
-/* small mobile */
-
-@media (max-width:420px){
-
-  .floating-wrapper{
-
-    bottom:16px;
-
-    right:14px;
-
-  }
-
-  .floating-glass-btn{
-
-    max-width:150px;
-
-    padding:9px 14px;
-
-  }
-
-  .floating-text{
-
-    font-size:.65rem;
-
-  }
-
+/* Floating WhatsApp button irundha ithai check panna */
+.whatsapp-float {
+  position: fixed;
+  right: 20px; /* Ithu screen-ku veliya pogama paathukonga */
+  bottom: 20px;
+  z-index: 100;
 }
